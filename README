@@ -1,0 +1,4 @@
+The file fq.py is to make fastq file, extract.py is to create maf file from sam files, msm.sh is the script to run MaxSSmap in Kong, and 
+mafComparator.command contains the command to run mafComparator, comparatorSummarizer.py is used to print out the summary from the xml 
+file which is the output from mafComparator.
+
