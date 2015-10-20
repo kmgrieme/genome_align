@@ -39,9 +39,9 @@ for chr_num in range(0, len(data), 1):
     chromosome = "".join(data[chr_num])
     print("Writing reads for %s." % chr_names[chr_num])
     chromosome = chromosome.upper()
-    for x in range(0, (len(chromosome)-200)//5+1, 1): # not sure why ling used these numbers
+    for x in range(0, (len(chromosome)-200)//5+1, 1):
         i = x * 5
-        header = "@%s_window%s\n" % (chr_names[chr_num], x+1)
+        header = "@%s_win%s\n" % (chr_names[chr_num], x+1)
         reads.write(header)
         reads.write(chromosome[i:i+200])
         reads.write("\n+\n")
@@ -50,7 +50,7 @@ for chr_num in range(0, len(data), 1):
         if x % 50000 == 0: # to check progress
             print(".",end="")
             sys.stdout.flush()
-    header = "@%s_window%s\n" % (chr_names[chr_num], x+2)
+    header = "@%s_win%s\n" % (chr_names[chr_num], x+2)
     reads.write(header)
     last_window = chromosome[(x+1)*5:]
     reads.write(last_window)
