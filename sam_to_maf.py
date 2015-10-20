@@ -20,6 +20,7 @@ with open(aligned_to, 'r') af f:
         line_num += 1
         if line_num % 50000 == 0:
             print(".",end="")
+            sys.stdout.flush()
  
 print("\nJoining strings.")
 for key in chr_seq:
