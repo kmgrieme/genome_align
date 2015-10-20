@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#!usr/bin/env python
 import sys
 
 script, in_file, out_file = sys.argv
@@ -11,20 +11,23 @@ print("Reading data from %s" % in_file)
 ## Print statements for python 3 but without them & range > xrange it should run in python 2
 
 with open(in_file, "r") as f:
-    lineno = 0
+    line_num = 0
     chr_num = 0
+    chr_names = []
     for line in f:
-        if lineno == 0:
+        if line_num == 0:
             data = [[]]
-            print("Beginning reads of chromosome %s" % (chr_num+1))
+            chr_names.append(line[1:].rstrip())
+            print("Reading %s" % (chr_names[chr_num]))
         elif line[0] == ">":
             chr_num += 1
+            chr_names.append(line[1:].rstrip())
             data.append([])
-            print("\nBeginning reads of chromosome %s" % (chr_num+1))
+            print("\nReading %s" % chr_names[chr_num])
         else:
             data[chr_num].append(line.rstrip())
-        lineno += 1
-        if lineno % 10000 == 0: # to check progress
+        line_num += 1
+        if line_num % 50000 == 0: # to check progress
             print(".",end="")
             sys.stdout.flush()
 
@@ -35,12 +38,11 @@ reads = open(out_file, "w")
 for chr_num in range(0, len(data), 1):
     print("Joining strings.")
     chromosome = "".join(data[chr_num])
-    print("Writing reads for %s." % (chr_num+1))
-    lendata = len(chromosome)
+    print("Writing reads for %s." % chr_names[chr_num])
     chromosome = chromosome.upper()
-    for x in range(0, (lendata-200)//5+1, 1): # not sure why ling used these numbers
+    for x in range(0, (len(chromosome)-200)//5+1, 1): # not sure why ling used these numbers
         i = x * 5
-        header = "@window %s chr%s\n" % (x+1, chr_num+1)
+        header = "@%s_window%s\n" % (chr_names[chr_num], x+1)
         reads.write(header)
         reads.write(chromosome[i:i+200])
         reads.write("\n+\n")
@@ -50,7 +52,7 @@ for chr_num in range(0, len(data), 1):
             print(".",end="")
             sys.stdout.flush()
     print()
-    header = "@window %s chr%s\n" % (x+2, chr_num+1)
+    header = "@%s_window%s\n" % (chr_names[chr_num], x+2)
     reads.write(header)
     last_window = chromosome[(x+1)*5:]
     reads.write(last_window)
