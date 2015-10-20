@@ -17,11 +17,11 @@ with open(in_file, "r") as f:
     for line in f:
         if line_num == 0:
             data = [[]]
-            chr_names.append(line[1:].rstrip())
+            chr_names.append(line[1:].rstrip()[3:])
             print("Reading %s" % (chr_names[chr_num]))
         elif line[0] == ">":
             chr_num += 1
-            chr_names.append(line[1:].rstrip())
+            chr_names.append(line[1:].rstrip()[3:])
             data.append([])
             print("\nReading %s" % chr_names[chr_num])
         else:
