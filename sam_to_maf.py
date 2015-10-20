@@ -1,7 +1,4 @@
 #!usr/bin/env python
-
-## VERY incomplete at the moment, just the start of it
-
 import sys
 
 script, aligned_to, sam_aln, maf_aln = sys.argv
@@ -20,7 +17,6 @@ with open(aligned_to, 'r') af f:
         line_num += 1
         if line_num % 50000 == 0:
             print(".",end="")
-            sys.stdout.flush()
  
 print("\nJoining strings.")
 for key in chr_seq:
@@ -34,12 +30,44 @@ maf_file = open(maf_aln, "w")
 
 maf_file.write("##maf version=1\n")
 
+## flag number info: https://broadinstitute.github.io/picard/explain-flags.html
+## format specifications: https://genome.ucsc.edu/FAQ/FAQformat.html
+
 for line in sam_file:
     if line[0] == "@":
-         continue
+        continue
     read_aln = line.split('\t')
     flag = read_aln[1]
+    if flag == 4: # read unmapped
+        continue
     chromosome = read_aln[2]
-    chr_index = read_aln[3] - 1
+    chr_index = int(read_aln[3]) - 1
     cigar = read_aln[4]
     read = read_aln[9]
+    cigar_index = 0
+    read_index = 0
+    local_read_aln = []
+    local_ref_aln = []
+    while cigar_index < len(cigar):
+        operation = cigar[cigar_index]
+        cigar_index += 1
+        cigar_num = ""
+        while not cigar[cigar_index].isalpha():
+            cigar_num += cigar[cigar_index]
+            cigar_index += 1
+        op_length = int(cigar_num)
+        if operation == "M":
+            local_read_aln.append(read[read_index:read_index+op_length])
+            local_chr_aln.append(chr_seq[chromosome][chr_index:chr_index+op_length])
+            read_index += op_length
+            chr_index += op_length
+        elif operation == "I":
+            local_read_aln.append(read[read_index:read_index+op_length])
+            local_chr_aln.append("-"*(op_length-1))
+            read_index += op_length
+        elif operation == "D":
+            local_read_aln.append("-"*(op_length-1))
+            local_chr_aln.append(chr_seq[chromosome][chr_index:chr_index+op_length])
+            chr_index += op_length
+    local_read_aln = ''.join(local_read_aln)
+    local_chr_aln = ''.join(local_chr_aln)
