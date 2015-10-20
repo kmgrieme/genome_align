@@ -3,6 +3,8 @@ https://github.com/Cibiv/NextGenMap
 REVEAL:
 https://github.com/jasperlinthorst/reveal
 (need to install CMake to install both of these)
+mafTools:
+https://github.com/dentearl/mafTools
 
 Format information:
 https://genome.ucsc.edu/FAQ/FAQformat.html
