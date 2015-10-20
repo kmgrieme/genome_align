@@ -8,6 +8,8 @@ https://github.com/dentearl/mafTools
 
 Format information:
 https://genome.ucsc.edu/FAQ/FAQformat.html
+GFA specification:
+https://github.com/pmelsted/GFA-spec/blob/master/GFA-spec.md
 SAM flags:
 https://broadinstitute.github.io/picard/explain-flags.html
 
