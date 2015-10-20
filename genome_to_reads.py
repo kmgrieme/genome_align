@@ -2,7 +2,7 @@
 import sys
 
 script, in_file, out_file = sys.argv
-print("Reading data from %s" % in_file)
+print("Reading data from %s.\n" % in_file)
 
 ## The original script added each line of the file to a string.
 ## This begins a list for every chromosome in the file and appends each line to it.
@@ -17,11 +17,13 @@ with open(in_file, "r") as f:
     for line in f:
         if line_num == 0:
             data = [[]]
-            chr_names.append(line[1:].rstrip()[3:])
+            name = line[1:].rstrip()[-4:]
+            chr_names.append(name)
             print("Reading %s" % (chr_names[chr_num]))
         elif line[0] == ">":
             chr_num += 1
-            chr_names.append(line[1:].rstrip()[3:])
+            name = line[1:].rstrip()[-4:]
+            chr_names.append(name)
             data.append([])
             print("\nReading %s" % chr_names[chr_num])
         else:
@@ -31,8 +33,8 @@ with open(in_file, "r") as f:
             print(".",end="")
             sys.stdout.flush()
 
-print("\n%s chromosomes read. Beginning read windows." % (chr_num+1))
-
+print("\n\n%s chromosomes read. Beginning read windows." % (chr_num+1))
+print("Writing to file %s.\n" % out_file)
 reads = open(out_file, "w")
 
 for chr_num in range(0, len(data), 1):
@@ -51,7 +53,6 @@ for chr_num in range(0, len(data), 1):
         if x % 50000 == 0: # to check progress
             print(".",end="")
             sys.stdout.flush()
-    print()
     header = "@%s_window%s\n" % (chr_names[chr_num], x+2)
     reads.write(header)
     last_window = chromosome[(x+1)*5:]
@@ -59,6 +60,7 @@ for chr_num in range(0, len(data), 1):
     reads.write("\n+\n")
     reads.write("~"*len(last_window))
     reads.write("\n")
+    print("%s reads written for %s.\n" % (x+2, chr_names[chr_num]))
 
-print("Read generation complete. Closing write file.")
+print("\nRead generation complete. Closing write file.")
 reads.close()
