@@ -4,6 +4,12 @@ import sys
 script, in_file, out_file = sys.argv
 print("Reading data from %s" % in_file)
 
+## The original script added each line of the file to a string.
+## This begins a list for every chromosome in the file and appends each line to it.
+## Only makes a string out of the chromosome when creating reads.
+## Speeds the program up significantly since python isn't making new strings constantly.
+## Print statements for python 3 but without them & range > xrange it should run in python 2
+
 with open(in_file, "r") as f:
     lineno = 0
     chr_num = 0
@@ -32,7 +38,7 @@ for chr_num in range(0, len(data), 1):
     print("Writing reads for %s." % (chr_num+1))
     lendata = len(chromosome)
     chromosome = chromosome.upper()
-    for x in range(0, (lendata-200)//5+1, 1):
+    for x in range(0, (lendata-200)//5+1, 1): # not sure why ling used these numbers
         i = x * 5
         header = "@window %s chr%s\n" % (x+1, chr_num+1)
         reads.write(header)
