@@ -13,18 +13,15 @@ print("Reading data from %s.\n" % in_file)
 with open(in_file, "r") as f:
     line_num = 0
     chr_num = 0
+    data = []
     chr_names = []
     for line in f:
-        if line_num == 0:
-            data = [[]]
-            name = line[1:].rstrip()[-4:]
-            chr_names.append(name)
-            print("Reading %s" % (chr_names[chr_num]))
-        elif line[0] == ">":
-            chr_num += 1
+        if line[0] == ">":
             name = line[1:].rstrip()[-4:]
             chr_names.append(name)
             data.append([])
+            if line_num != 0:
+                chr_num += 1
             print("\nReading %s" % chr_names[chr_num])
         else:
             data[chr_num].append(line.rstrip())
