@@ -57,7 +57,7 @@ for chr_num in range(0, len(data), 1):
     reads.write("\n+\n")
     reads.write("~"*len(last_window))
     reads.write("\n")
-    print("%s reads written for %s.\n" % (x+2, chr_names[chr_num]))
+    print("\n%s reads written for %s.\n" % (x+2, chr_names[chr_num]))
 
 print("\nRead generation complete. Closing write file.")
 reads.close()
