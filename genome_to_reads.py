@@ -46,7 +46,7 @@ for chr_num in range(0, len(data), 1):
       ## creates 200bp reads every 5bp
       ## i: index in the sequence; x+1: window number
         i = x * 5
-        reads.write(header_string % (chr_names[chr_num], i, 200, x+1)
+        reads.write(header_string % (chr_names[chr_num], i, 200, x+1))
         reads.write(chromosome[i:i+200])
         reads.write("\n+\n")
         reads.write("~"*200) # read quality for fastq format
