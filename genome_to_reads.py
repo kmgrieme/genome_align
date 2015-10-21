@@ -16,13 +16,15 @@ with open(in_file, "r") as f:
     data = []
     chr_names = []
     for line in f:
+      ## if line starts with >, gets sequence name information
         if line[0] == ">":
-            name = line[1:].rstrip()[-4:]
+            name = line[1:].rstrip()
             chr_names.append(name)
             data.append([])
             if line_num != 0:
                 chr_num += 1
             print("\nReading %s" % chr_names[chr_num])
+      ## pulls each line, strips, appends to array for chromosome
         else:
             data[chr_num].append(line.rstrip())
         line_num += 1
@@ -33,6 +35,7 @@ with open(in_file, "r") as f:
 print("\n\n%s chromosomes read. Beginning read windows." % (chr_num+1))
 print("Writing to file %s.\n" % out_file)
 reads = open(out_file, "w")
+header_string = "@%s_%s_l%s_win%s\n" # chromosome name, index, l+len, window
 
 for chr_num in range(0, len(data), 1):
     print("Joining strings.")
@@ -40,19 +43,20 @@ for chr_num in range(0, len(data), 1):
     print("Writing reads for %s." % chr_names[chr_num])
     chromosome = chromosome.upper()
     for x in range(0, (len(chromosome)-200)//5+1, 1):
+      ## creates 200bp reads every 5bp
+      ## i: index in the sequence; x+1: window number
         i = x * 5
-        header = "@%s_win%s\n" % (chr_names[chr_num], x+1)
-        reads.write(header)
+        reads.write(header_string % (chr_names[chr_num], i, 200, x+1)
         reads.write(chromosome[i:i+200])
         reads.write("\n+\n")
-        reads.write("~"*200)
+        reads.write("~"*200) # read quality for fastq format
         reads.write("\n")
         if x % 50000 == 0: # to check progress
             print(".",end="")
             sys.stdout.flush()
-    header = "@%s_win%s\n" % (chr_names[chr_num], x+2)
-    reads.write(header)
     last_window = chromosome[(x+1)*5:]
+    reads.write(header_string % (chr_names[chr_num], (x+1)*5,
+                                 len(last_window), x+2))
     reads.write(last_window)
     reads.write("\n+\n")
     reads.write("~"*len(last_window))
