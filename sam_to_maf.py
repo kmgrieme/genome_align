@@ -1,101 +1,133 @@
 #!usr/bin/env python
+
 import sys
+from chromosome_lengths import *
 
-script, aligned_to, sam_aln, maf_aln = sys.argv
+if len(sys.argv) != 4:
+    print("\nInvalid number of arguments.")
+    print("Run using the format 'script ref_genome sam_alignment maf_destination'.\n")
+    quit()
 
-with open(aligned_to, 'r') af f:
-  ## creates hash/dict with key:chromosome name mapping to chromosome seq
-    chr_seq = dict()
+script, genome, sam_f, maf_f = sys.argv
+
+print("\nConverting %s to MAF, destination %s." % (sam_f, maf_f))
+print("\nOpening reference genome\n.")
+with open(genome, "r") as f:
     line_num = 0
+    chr_dict = dict()
     for line in f:
         if line[0] == ">":
             current_chr = line[1:].rstrip()
-            print("\nGetting full data from %s." % current_chr)
-            chr_seq[current_chr] = []
             line_num += 1
+            chr_dict[current_chr] = []
+            print("Processing data from chromosome %s.\n" % current_chr)
             continue
-        chr_seq[current_chr].append(line.rstrip())
+        chr_dict[current_chr].append(line.rstrip())
+        print("Working on line %s." % (line_num + 1), end="\r")
         line_num += 1
-        if line_num % 50000 == 0:
-            print(".",end="")
-            sys.stdout.flush()
- 
-print("\nJoining strings.")
-for key in chr_seq:
-    chr_seq[key] = "".join(chr_seq[key])
-print("Reference genome data collection complete.")
+    print("\n\nReference genome data collection complete.")
 
-print("\nOpening SAM format alignment file.")
-sam_file = open(sam_aln, "r")
-print("Creating MAF format alignment file.")
-maf_file = open(maf_aln, "w")
+print("Joining chromosome strings.")
+chr_lens = dict()
+for key in chr_dict:
+    chr_dict[key] = ''.join(chr_dict[key])
+    chr_lens[key] = len(chr_dict[key])
 
-maf_file.write("##maf version=1\n")
+print("\nOpening SAM alignment file.")
+sam = open(sam_f, "r")
+print("Creating MAF alignment file.")
+maf = open(maf_f, "w")
+maf.write("##maf version=1\n")
 
-## flag info: https://broadinstitute.github.io/picard/explain-flags.html
-## format specifications: https://genome.ucsc.edu/FAQ/FAQformat.html
+print("Processing SAM alignment.\n")
 
 line_num = 0
 
-for line in sam_file:
-    
-  ## progress indicator
-    if line_num % 200000 == 0:
-        print(".",end="")
-        sys.stdout.flush()
-    line_num += 1
+for line in sam:
+    print("Processing line %s of SAM file." % (line_num + 1), end="\r")
 
     if line[0] == "@":
+        if line[0:3] == "@PG":
+            maf.write("#%s" % line[3:].rstrip())
+        line_num += 1
         continue
-    read_aln = line.split('\t')
 
-  ## getting read info from name
-  ## format from genome_to_reads.py: name_index_l+length_win+windownumber
-    read_info = read_aln[0]
-    read_info = read_info.split('_')
-    read_chr_name = read_info[0]
-    read_chr_index = read_info[1]
-    read_len = read_info[2][1:]
+    aln_info = line.split("\t")
 
-  ## getting ref info and alignment information
-    flag = read_aln[1]
-    if flag == 4: # read unmapped
-        continue
-    chromosome = read_aln[2]
-    chr_index = int(read_aln[3]) - 1
-  ## read sequence
-    read = read_aln[9]
+  ## flag: determine operation
+    flag = int(aln_info[1])
+    if flag == 4: continue
+    elif flag == 0: read_dir = "+"
+    elif flag == 16: read_dir = "-"
 
-  ## getting cigar and assigning variables for cigar traversal
-    cigar = read_aln[4]
-    cigar_index = 0
-    read_index = 0
-    local_read_aln = []
-    local_ref_aln = []
+  ## info for read from fq window name + read seq
+  ## format: chrname_chrindex_L+length_winX
+    win_info = aln_info[0].split('_')
+    read_chr = win_info[0]
+    read_chr_i = win_info[1]
+    read_len = win_info[2][1:]
+    read = aln_info[9]
 
-  ## going through cigar string to get sequences back
-    while cigar_index < len(cigar):
-        operation = cigar[cigar_index]
-        cigar_index += 1
-        cigar_num = ""
-        while not cigar[cigar_index].isalpha():
-            cigar_num += cigar[cigar_index]
-            cigar_index += 1
-        op_length = int(cigar_num)
-        if operation == "M": # matching bases
-            local_read_aln.append(read[read_index:read_index+op_length])
-            local_chr_aln.append(chr_seq[chromosome][chr_index:chr_index+op_length])
-            read_index += op_length
-            chr_index += op_length
-        elif operation == "I": # gap in ref
-            local_read_aln.append(read[read_index:read_index+op_length])
-            local_chr_aln.append("-"*(op_length-1))
-            read_index += op_length
-        elif operation == "D": # gap in read
-            local_read_aln.append("-"*(op_length-1))
-            local_chr_aln.append(chr_seq[chromosome][chr_index:chr_index+op_length])
-            chr_index += op_length
-    local_read_aln = ''.join(local_read_aln)
-    local_chr_aln = ''.join(local_chr_aln)
+  ## info for ref
+    ref_chr = aln_info[2]
+    ref_chr_i = int(aln_info[3]) - 1
 
-  ## writing read alignments to file
+  ## cigar string traversal setup
+    cigar = aln_info[5]
+    cigar_i = 0
+    read_i = 0
+    ref_i = ref_chr_i
+    read_aln = []
+    ref_aln = []
+
+  ## cigar string traversal
+    while cigar_i < len(cigar):
+        op_num = ""
+        while not cigar[cigar_i].isalpha():
+            op_num += cigar[cigar_i]
+            cigar_i += 1
+        op_num = int(op_num)
+        op = cigar[cigar_i]
+        if op == "M": # match
+            read_aln.append(read[read_i:read_i + op_num])
+            ref_aln.append(chr_dict[ref_chr][ref_i:ref_i + op_num])
+            read_i += op_num
+            ref_i += op_num
+        elif op == "I": # gap in ref
+            read_aln.append(read[read_i:read_i + op_num])
+            ref_aln.append("-" * op_num)
+            read_i += op_num
+        elif op == "D": # gap in read
+            read_aln.append("-" * op_num)
+            ref_aln.append(chr_dict[ref_chr][ref_i:ref_i + op_num])
+            ref_i += op_num
+        cigar_i += 1
+
+    ref_len = ref_i - ref_chr_i
+
+    read_aln = ''.join(read_aln)
+    ref_aln = ''.join(ref_aln)
+
+    line_num += 1
+
+  ## writing to maf file
+  ## maf alignment format:
+      ## a score=x
+      ## s seq_name start_index #bp_aligned direction length_wholeseq seq
+      ## s hg16.chr7    27707221 13 + 158545518 gcagctgaaaaca
+      ## new line between each alignment, groups are how it's read
+    maf.write("a score=0\n")
+  ## this is the most ridiculous mess in the world ugh
+    read_str = "s %s%s %s %s %s %s\n" % (read_chr.ljust(30), str(read_chr_i).rjust(12), read_len, 
+                                read_dir, str(sim_chr_len[read_chr]).rjust(12), read_aln)
+    ref_str = "s %s%s %s %s %s %s\n" % (ref_chr.ljust(30), str(ref_chr_i).rjust(12), ref_len, 
+                                "+", str(chr_lens[ref_chr]).rjust(12), ref_aln)
+    maf.write(read_str)
+    maf.write("\n")
+    maf.write(ref_str)
+    maf.write("\n\n")
+
+print("%s file lines read total." % (line_num + 1))
+print("\nClosing output MAF file.")
+maf.close()
+print("adieu\n")
