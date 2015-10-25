@@ -1,0 +1,12 @@
+simOrang.chrE_0_L200_win1       0       simHuman.chrA   15506775        60      200M    *       0       0       AATTTGACAAGAGCAAGCAAAACTCTAACAAGGGGTTGGGGTTATTGGACTCCCAACTAGGTAGGTCTTAAGCACCACCTCCAAAACCCTTCGCACAAGGTGTCTAAGGGCCTTTACAATCTGTATATGGCATCCAGACATTACGAGCACTGTTCTTCACCAAAAACCCAATCAGCATAAAAAGCAGGCCTGGGAAGTGG        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        AS:i:1850       NM:i:6  XI:f:0.97       X0:i:1  XE:i:38 XR:i:200        MD:Z:63A27T31C20A18G8T27
+simOrang.chrE_5_L200_win2       0       simHuman.chrA   15506780        60      200M    *       0       0       GACAAGAGCAAGCAAAACTCTAACAAGGGGTTGGGGTTATTGGACTCCCAACTAGGTAGGTCTTAAGCACCACCTCCAAAACCCTTCGCACAAGGTGTCTAAGGGCCTTTACAATCTGTATATGGCATCCAGACATTACGAGCACTGTTCTTCACCAAAAACCCAATCAGCATAAAAAGCAGGCCTGGGAAGTGGGGTAC        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        AS:i:1850       NM:i:6  XI:f:0.97       X0:i:1  XE:i:37 XR:i:200        MD:Z:58A27T31C20A18G8T32
+
+line[0] = read information
+line[1] = flag
+line[2] = ref chromosome
+line[3] = starting index in ref chromosome
+line[5] = cigar string for ref sequence
+line[9] = read sequence
+rest = ???????
+
+read information: chromosome_starting index_L+window length_window number
