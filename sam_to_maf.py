@@ -11,7 +11,7 @@ if len(sys.argv) != 4:
 script, genome, sam_f, maf_f = sys.argv
 
 print("\nConverting %s to MAF, destination %s." % (sam_f, maf_f))
-print("\nOpening reference genome\n.")
+print("\nOpening reference genome.\n")
 with open(genome, "r") as f:
     line_num = 0
     chr_dict = dict()
@@ -20,12 +20,13 @@ with open(genome, "r") as f:
             current_chr = line[1:].rstrip()
             line_num += 1
             chr_dict[current_chr] = []
-            print("Processing data from chromosome %s.\n" % current_chr)
+            print("Processing data from chromosome %s." % current_chr)
             continue
         chr_dict[current_chr].append(line.rstrip())
         print("Working on line %s." % (line_num + 1), end="\r")
         line_num += 1
-    print("\n\nReference genome data collection complete.")
+    print("%s lines processed." % (line_num + 1))
+    print("Reference genome data collection complete.")
 
 print("Joining chromosome strings.")
 chr_lens = dict()
@@ -48,7 +49,7 @@ for line in sam:
 
     if line[0] == "@":
         if line[0:3] == "@PG":
-            maf.write("#%s" % line[3:].rstrip())
+            maf.write("#%s\n" % line[3:].rstrip())
         line_num += 1
         continue
 
@@ -123,9 +124,8 @@ for line in sam:
     ref_str = "s %s%s %s %s %s %s\n" % (ref_chr.ljust(30), str(ref_chr_i).rjust(12), ref_len, 
                                 "+", str(chr_lens[ref_chr]).rjust(12), ref_aln)
     maf.write(read_str)
-    maf.write("\n")
     maf.write(ref_str)
-    maf.write("\n\n")
+    maf.write("\n")
 
 print("%s file lines read total." % (line_num + 1))
 print("\nClosing output MAF file.")
