@@ -49,7 +49,8 @@ for line in sam:
 
     if line[0] == "@":
         if line[0:3] == "@PG":
-            maf.write("#%s\n" % line[3:].rstrip())
+            maf.write("# Program parameters:\n")
+            maf.write("# %s\n" % line[3:].rstrip())
         line_num += 1
         continue
 
@@ -65,8 +66,8 @@ for line in sam:
   ## format: chrname_chrindex_L+length_winX
     win_info = aln_info[0].split('_')
     read_chr = win_info[0]
-    read_chr_i = win_info[1]
-    read_len = win_info[2][1:]
+    read_chr_i = int(win_info[1])
+    read_len = int(win_info[2][1:])
     read = aln_info[9]
 
   ## info for ref
@@ -81,6 +82,8 @@ for line in sam:
     read_aln = []
     ref_aln = []
 
+    first_clip = True # set up for first clip in cigar
+
   ## cigar string traversal
     while cigar_i < len(cigar):
         op_num = ""
@@ -90,8 +93,11 @@ for line in sam:
         op_num = int(op_num)
         op = cigar[cigar_i]
         if op == "S": # soft clip: unaligned bases in read
-            read_len -= op_num # reduce by # of unaligned bases
-            read_i += op_num
+            if first_clip:
+                read_i += op_num
+                read_chr_i += op_num # change starting chromosome index
+                first_clip = False
+            read_len -= op_num
         elif op == "M": # match
             read_aln.append(read[read_i:read_i + op_num])
             ref_aln.append(chr_dict[ref_chr][ref_i:ref_i + op_num])
@@ -107,6 +113,8 @@ for line in sam:
             ref_i += op_num
         cigar_i += 1
 
+    first_clip = True # turn the option back on for next line
+
     ref_len = ref_i - ref_chr_i
 
     read_aln = ''.join(read_aln)
@@ -117,7 +125,7 @@ for line in sam:
   ## writing to maf file
   ## maf alignment format:
       ## a score=x
-      ## s seq_name start_index #bp_aligned direction length_wholeseq seq
+      ## s seq_name start_index #bp_aligned direction length_chromosome seq
       ## s hg16.chr7    27707221 13 + 158545518 gcagctgaaaaca
       ## new line between each alignment, groups are how it's read
     maf.write("a score=0\n")
@@ -133,4 +141,4 @@ for line in sam:
 print("%s file lines read total." % (line_num + 1))
 print("\nClosing output MAF file.")
 maf.close()
-print("adieu\n")
+print("Conversion complete.\n")
