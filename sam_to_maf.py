@@ -89,7 +89,10 @@ for line in sam:
             cigar_i += 1
         op_num = int(op_num)
         op = cigar[cigar_i]
-        if op == "M": # match
+        if op == "S": # soft clip: unaligned bases in read
+            read_len -= op_num # reduce by # of unaligned bases
+            read_i += op_num
+        elif op == "M": # match
             read_aln.append(read[read_i:read_i + op_num])
             ref_aln.append(chr_dict[ref_chr][ref_i:ref_i + op_num])
             read_i += op_num
