@@ -6,8 +6,10 @@ https://github.com/jasperlinthorst/reveal
 mafTools:
 https://github.com/dentearl/mafTools
 
-Format information:
+General format information (incl MAF):
 https://genome.ucsc.edu/FAQ/FAQformat.html
+SAM specification:
+http://samtools.github.io/hts-specs/SAMv1.pdf
 GFA specification:
 https://github.com/pmelsted/GFA-spec/blob/master/GFA-spec.md
 SAM flags:
