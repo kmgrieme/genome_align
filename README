@@ -19,3 +19,9 @@ Ling's notes:
 The file fq.py is to make fastq file, extract.py is to create maf file from sam files, msm.sh is the script to run MaxSSmap in Kong, and 
 mafComparator.command contains the command to run mafComparator, comparatorSummarizer.py is used to print out the summary from the xml 
 file which is the output from mafComparator.
+
+Order of operations:
+run genome_to_reads on one genome to get reads to align with short read mapper (output: fastq)
+run short read mapper of choice with reads and reference genome (not in read format)
+run SAM to MAF if output is a SAM file
+run mafComparator
