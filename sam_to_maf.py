@@ -46,12 +46,12 @@ line_num = 0
 
 for line in sam:
     print("Processing line %s of SAM file." % (line_num + 1), end="\r")
+    line_num += 1
 
     if line[0] == "@":
         if line[0:3] == "@PG":
             maf.write("# Program parameters:\n")
             maf.write("# %s\n" % line[3:].rstrip())
-        line_num += 1
         continue
 
     aln_info = line.split("\t")
@@ -113,14 +113,10 @@ for line in sam:
             ref_i += op_num
         cigar_i += 1
 
-    first_clip = True # turn the option back on for next line
-
     ref_len = ref_i - ref_chr_i
 
     read_aln = ''.join(read_aln)
     ref_aln = ''.join(ref_aln)
-
-    line_num += 1
 
   ## writing to maf file
   ## maf alignment format:

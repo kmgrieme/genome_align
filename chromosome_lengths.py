@@ -15,3 +15,9 @@ sim_chr_len["simOrang.chrC"] = 35683973
 sim_chr_len["simOrang.chrD"] = 10564720
 sim_chr_len["simOrang.chrE"] = 37692687
 sim_chr_len["simOrang.chrF"] = 15493520
+
+sim_chr_len["simRat.chrA"] = 45269609
+sim_chr_len["simRat.chrO"] = 4060565
+sim_chr_len["simRat.chrP"] = 7089915
+sim_chr_len["simRat.chrQ"] = 54146922
+sim_chr_len["simRat.chrR"] = 88137694
