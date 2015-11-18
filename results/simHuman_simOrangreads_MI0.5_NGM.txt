@@ -1,0 +1,7 @@
+                                     Precision     Recall    F-score    TP (A)    TP (B)    FP (B)    FN (A)
+                 Overall (w/o self)    0.68822    0.78879    0.73508    778557    686869    311164    208466
+                 Overall (w/  self)    0.68822    0.77850    0.73058    778557    686869    311164    221511
+
+                      self-simHuman        nan    0.00000        nan         0         0         0      6520
+                      self-simOrang        nan    0.00000        nan         0         0         0      6525
+                  simHuman-simOrang    0.68822    0.78879    0.73508    778557    686869    311164    208466
