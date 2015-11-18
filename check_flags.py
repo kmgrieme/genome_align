@@ -9,6 +9,8 @@ with open(sam_file, "r") as f:
     for line in f:
         print("Processing line %s" % line_num, end="\r")
         if line[0] == "@":
+            if line[0:3] == "@PG":
+                parameter_string = line[3:]
             continue
         flag = int(line.split("\t")[1])
         try:
@@ -22,5 +24,6 @@ flags = list(flag_dict.keys())
 flags.sort()
 
 with open("%s_flag_list.txt" % sam_file[:-4], "w") as f:
+    f.write("Parameters: %s\n" % parameter_string)
     for key in flags:
         f.write("Flag %s: %s\n" % (key, flag_dict[key]))

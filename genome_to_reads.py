@@ -1,12 +1,11 @@
 #!usr/bin/env python
 import sys
 
-if len(sys.argv) < 3:
-    print("Not enough arguments to run the program.")
-    print("Please run in the format script, input genome, destination.")
+if len(sys.argv) != 5:
+    print("Please run in the format script, input genome, destination, index jump, read length.")
     quit()
 
-script, in_file, out_file = sys.argv
+script, in_file, out_file, index, length = sys.argv
 print("Reading data from %s." % in_file)
 
 ## The original script added each line of the file to a string.
@@ -54,15 +53,15 @@ for chr_num in range(0, len(data), 1):
     chromosome = "".join(data[chr_num])
     print("Writing reads for %s." % chr_names[chr_num])
     chromosome = chromosome.upper()
-    for x in range(0, (len(chromosome)-200)//5+1, 1):
-      ## creates 200bp reads every 5bp
+    for x in range(0, (len(chromosome)-length)//index+1, 1):
+      ## creates length reads every index
       ## i: index in the sequence; x+1: window number
-        i = x * 5
+        i = x * index
         total_reads += 1
-        reads.write(header_string % (chr_names[chr_num], i, 200, x+1))
-        reads.write(chromosome[i:i+200])
+        reads.write(header_string % (chr_names[chr_num], i, length, x+1))
+        reads.write(chromosome[i:i+length])
         reads.write("\n+\n")
-        reads.write("~"*200) # read quality for fastq format
+        reads.write("~"*length) # read quality for fastq format
         reads.write("\n")
         print(progress_str % (x+1, chr_names[chr_num], total_reads), end="\r")
         '''
@@ -70,8 +69,8 @@ for chr_num in range(0, len(data), 1):
             print(".",end="")
             sys.stdout.flush()
         '''
-    last_window = chromosome[(x+1)*5:]
-    reads.write(header_string % (chr_names[chr_num], (x+1)*5, len(last_window), x+2))
+    last_window = chromosome[(x+1)*index:]
+    reads.write(header_string % (chr_names[chr_num], (x+1)*index, len(last_window), x+2))
     reads.write(last_window)
     reads.write("\n+\n")
     reads.write("~"*len(last_window))
