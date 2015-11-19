@@ -1,0 +1,5 @@
+Parameters: 	ID:ngm	PN:ngm	VN:0.4.12	CL:" --affine 0 --argos_min_score 0 --block_multiplier 2 --bs_cutoff 6 --bs_mapping 0 --cpu_threads 1 --dualstrand 1 --fast_pairing 0 --format 1 --gap_extend_penalty 5 --gap_read_penalty 20 --gap_ref_penalty 20 --hard_clip 0 --keep_tags 0 --kmer 13 --kmer_min 0 --kmer_skip 2 --match_bonus 10 --match_bonus_tc 4 --match_bonus_tt 4 --max_cmrs 2147483647 --max_equal 1 --max_insert_size 1000 --min_identity 0.650000 --min_insert_size 0 --min_mq 0 --min_residues 0.500000 --min_score 0.000000 --mismatch_penalty 15 --mode 0 --no_progress 0 --no_unal 0 --ocl_threads 1 --output ../alignments/simHuman_simOrang_20151023.sam --overwrite 1 --pair_score_cutoff 0.900000 --paired 0 --parse_all 1 --pe_delimiter / --qry simOrang_reads_20151023.fq --qry_count -1 --qry_start 0 --ref simHuman.fa --ref_mode -1 --silent_clip 0 --skip_mate_check 0 --skip_save 0 --step_count 4 --strata 0 --topn 1"
+
+Flag 0: 28148145
+Flag 4: 473136
+Flag 16: 7644862
