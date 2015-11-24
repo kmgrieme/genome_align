@@ -1,5 +1,10 @@
 sim_chr_len = dict()
 
+sim_chr_len["simHuman.chrA"] = 53106993
+sim_chr_len["simHuman.chrB"] = 85835872
+sim_chr_len["simHuman.chrC"] = 35630306
+sim_chr_len["simHuman.chrD"] = 10572275
+
 sim_chr_len["simChimp.chrA"] = 53121445
 sim_chr_len["simChimp.chrB"] = 85778862
 sim_chr_len["simChimp.chrC"] = 35661804

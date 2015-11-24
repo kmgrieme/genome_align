@@ -22,8 +22,9 @@ with open(genome) as f:
 output = open(rev_genome, "w")
 
 for name in chr_names_ordered:
+    new_name = name + ".revcomp"
     complement = list(reversed(chr_complement[name]))
-    output.write(name)
+    output.write(new_name)
     output.write("\n")
     for x in range(0, len(complement), 50):
         output.write(''.join(complement[x:x+50]))
