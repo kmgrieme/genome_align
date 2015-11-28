@@ -8,7 +8,7 @@ genome = open(genome_file)
 
 for line in genome:
     if line[0] == ">":
-        file_name = line[1:] + ".fa"
+        file_name = line[1:].strip() + ".fa"
         working_file = open(file_name, "w")
     working_file.write(line)
 
