@@ -67,6 +67,7 @@ for line in sam:
     win_info = aln_info[0].split('_')
     read_chr = win_info[0]
     read_chr_i = int(win_info[1])
+    if read_dir = "-": read_chr_i = sim_chr_lens[read_chr] - read_chr_i
     read_len = int(win_info[2][1:])
     read = aln_info[9]
 
