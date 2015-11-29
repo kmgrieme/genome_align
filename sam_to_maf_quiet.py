@@ -67,8 +67,9 @@ for line in sam:
     win_info = aln_info[0].split('_')
     read_chr = win_info[0]
     read_chr_i = int(win_info[1])
-    if read_dir = "-": read_chr_i = sim_chr_lens[read_chr] - read_chr_i
     read_len = int(win_info[2][1:])
+    if read_dir == "-": 
+        read_chr_i = sim_chr_len[read_chr] - (read_chr_i + read_len)
     read = aln_info[9]
 
   ## info for ref
@@ -83,7 +84,6 @@ for line in sam:
     read_aln = []
     ref_aln = []
 
-    first_clip = True # set up for first clip in cigar
 
   ## cigar string traversal
     while cigar_i < len(cigar):
@@ -94,10 +94,9 @@ for line in sam:
         op_num = int(op_num)
         op = cigar[cigar_i]
         if op == "S": # soft clip: unaligned bases in read
-            if first_clip:
+            if cigar_i != (len(cigar) - 1): # skips changing index if last clip 
                 read_i += op_num
                 read_chr_i += op_num # change starting chromosome index
-                first_clip = False
             read_len -= op_num
         elif op == "M": # match
             read_aln.append(read[read_i:read_i + op_num])

@@ -39,9 +39,9 @@ def reads_to_file(block, chr1, out):
             seq = seq.upper()
             fastq_header = "@%s_%s_L%s\n"
             if len(seq) > 1000: 
-                print("Warning: sequence larger than 1k bp")
+                print("Warning: sequence larger than 1k bp (%s bp)" % len(seq))
             elif len(seq) < 50:
-                print("Warning: sequence smaller than 50 bp")
+                print("Warning: sequence smaller than 50 bp (%s bp)" % len(seq))
             out.write(fastq_header % (chr_name, chr_index, len(seq)))
             out.write(seq)
             out.write("\n+\n")
