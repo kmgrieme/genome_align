@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<alignmentComparisons numberOfSamples="1000000" near="0" seed="94950472570260" maf1="../Truth/primate/simPrimates.ancestor.maf" maf2="simHuman_simOrangreads_MI0_NGM_20151129.maf" numberOfPairsInMaf1="184223462" numberOfPairsInMaf2="7073449127" version="version 0.9 May 2013" buildDate="2015-05-14T13:47EDT" buildBranch="master" buildCommit="3397dbc362987138e5243125cb05a405b81e0a27">
+	<homologyTests fileA="../Truth/primate/simPrimates.ancestor.maf" fileB="simHuman_simOrangreads_MI0_NGM_20151129.maf">
+		<aggregateResults>
+			<all totalTests="999120" totalTrue="980036" totalFalse="19084" average="0.980899"/>
+		</aggregateResults>
+		<homologyPairTests>
+			<homologyTest sequenceA="simOrang.chrF" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="576" totalTrue="0" totalFalse="576" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrF" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="576" totalTrue="0" totalFalse="576" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrF" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="82962" totalTrue="81861" totalFalse="1101" average="0.986729"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrF" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="82962" totalTrue="81861" totalFalse="1101" average="0.986729"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrE" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="3" totalTrue="0" totalFalse="3" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrE" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="3" totalTrue="0" totalFalse="3" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrE" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="1326" totalTrue="0" totalFalse="1326" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrE" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="1326" totalTrue="0" totalFalse="1326" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrE" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="201630" totalTrue="199129" totalFalse="2501" average="0.987596"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrE" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="201630" totalTrue="199129" totalFalse="2501" average="0.987596"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrD" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrD" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrD" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="3" totalTrue="0" totalFalse="3" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrD" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="3" totalTrue="0" totalFalse="3" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrD" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="360" totalTrue="0" totalFalse="360" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrD" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="360" totalTrue="0" totalFalse="360" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrD" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="56508" totalTrue="55757" totalFalse="751" average="0.986710"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrD" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="56508" totalTrue="55757" totalFalse="751" average="0.986710"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrC" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="1" totalTrue="0" totalFalse="1" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrC" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="1" totalTrue="0" totalFalse="1" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrC" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="6" totalTrue="0" totalFalse="6" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrC" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="6" totalTrue="0" totalFalse="6" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrC" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="1205" totalTrue="0" totalFalse="1205" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrC" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="1205" totalTrue="0" totalFalse="1205" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrC" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="192142" totalTrue="189700" totalFalse="2442" average="0.987291"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrC" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="192142" totalTrue="189700" totalFalse="2442" average="0.987291"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="38" totalTrue="0" totalFalse="38" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="38" totalTrue="0" totalFalse="38" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="23" totalTrue="0" totalFalse="23" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="23" totalTrue="0" totalFalse="23" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="3119" totalTrue="0" totalFalse="3119" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrB" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="3119" totalTrue="0" totalFalse="3119" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrB" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="459473" totalTrue="453589" totalFalse="5884" average="0.987194"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrB" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="459473" totalTrue="453589" totalFalse="5884" average="0.987194"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="2" totalTrue="2" totalFalse="0" average="1.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="2" totalTrue="2" totalFalse="0" average="1.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="56123" totalTrue="55747" totalFalse="376" average="0.993300"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="56123" totalTrue="55747" totalFalse="376" average="0.993300"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="2" totalTrue="2" totalFalse="0" average="1.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="2" totalTrue="2" totalFalse="0" average="1.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="14" totalTrue="10" totalFalse="4" average="0.714286"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="14" totalTrue="10" totalFalse="4" average="0.714286"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simHuman.chrD">
+				<aggregateResults>
+					<all totalTests="416" totalTrue="0" totalFalse="416" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simHuman.chrD">
+						<aggregateResults>
+							<all totalTests="416" totalTrue="0" totalFalse="416" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="56570" totalTrue="55761" totalFalse="809" average="0.985699"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="56570" totalTrue="55761" totalFalse="809" average="0.985699"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="4" totalTrue="4" totalFalse="0" average="1.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="4" totalTrue="4" totalFalse="0" average="1.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="9" totalTrue="8" totalFalse="1" average="0.888889"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="9" totalTrue="8" totalFalse="1" average="0.888889"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="190730" totalTrue="189533" totalFalse="1197" average="0.993724"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="190730" totalTrue="189533" totalFalse="1197" average="0.993724"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="38" totalTrue="33" totalFalse="5" average="0.868421"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="38" totalTrue="33" totalFalse="5" average="0.868421"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simHuman.chrC">
+				<aggregateResults>
+					<all totalTests="1325" totalTrue="0" totalFalse="1325" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simHuman.chrC">
+						<aggregateResults>
+							<all totalTests="1325" totalTrue="0" totalFalse="1325" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="192123" totalTrue="189578" totalFalse="2545" average="0.986753"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="192123" totalTrue="189578" totalFalse="2545" average="0.986753"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="1" totalTrue="0" totalFalse="1" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="1" totalTrue="0" totalFalse="1" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="31" totalTrue="28" totalFalse="3" average="0.903226"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="31" totalTrue="28" totalFalse="3" average="0.903226"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="10" totalTrue="7" totalFalse="3" average="0.700000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="10" totalTrue="7" totalFalse="3" average="0.700000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="57" totalTrue="48" totalFalse="9" average="0.842105"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="57" totalTrue="48" totalFalse="9" average="0.842105"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="456162" totalTrue="453480" totalFalse="2682" average="0.994121"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="456162" totalTrue="453480" totalFalse="2682" average="0.994121"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simHuman.chrD">
+				<aggregateResults>
+					<all totalTests="11" totalTrue="0" totalFalse="11" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simHuman.chrD">
+						<aggregateResults>
+							<all totalTests="11" totalTrue="0" totalFalse="11" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simHuman.chrC">
+				<aggregateResults>
+					<all totalTests="15" totalTrue="0" totalFalse="15" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simHuman.chrC">
+						<aggregateResults>
+							<all totalTests="15" totalTrue="0" totalFalse="15" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simHuman.chrB">
+				<aggregateResults>
+					<all totalTests="2883" totalTrue="0" totalFalse="2883" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simHuman.chrB">
+						<aggregateResults>
+							<all totalTests="2883" totalTrue="0" totalFalse="2883" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="459187" totalTrue="453563" totalFalse="5624" average="0.987752"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="459187" totalTrue="453563" totalFalse="5624" average="0.987752"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="82371" totalTrue="81855" totalFalse="516" average="0.993736"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="82371" totalTrue="81855" totalFalse="516" average="0.993736"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="200214" totalTrue="199093" totalFalse="1121" average="0.994401"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="200214" totalTrue="199093" totalFalse="1121" average="0.994401"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="10" totalTrue="3" totalFalse="7" average="0.300000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="10" totalTrue="3" totalFalse="7" average="0.300000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="118" totalTrue="117" totalFalse="1" average="0.991525"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="118" totalTrue="117" totalFalse="1" average="0.991525"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="77" totalTrue="66" totalFalse="11" average="0.857143"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="77" totalTrue="66" totalFalse="11" average="0.857143"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrD">
+				<aggregateResults>
+					<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrD">
+						<aggregateResults>
+							<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrC">
+				<aggregateResults>
+					<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrC">
+						<aggregateResults>
+							<all totalTests="2" totalTrue="0" totalFalse="2" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrB">
+				<aggregateResults>
+					<all totalTests="17" totalTrue="0" totalFalse="17" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrB">
+						<aggregateResults>
+							<all totalTests="17" totalTrue="0" totalFalse="17" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrA">
+				<aggregateResults>
+					<all totalTests="1812" totalTrue="0" totalFalse="1812" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simHuman.chrA">
+						<aggregateResults>
+							<all totalTests="1812" totalTrue="0" totalFalse="1812" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="284623" totalTrue="281134" totalFalse="3489" average="0.987742"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="284623" totalTrue="281134" totalFalse="3489" average="0.987742"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="self" sequenceB="self">
+				<aggregateResults>
+					<all totalTests="13022" totalTrue="0" totalFalse="13022" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="self" sequenceB="self">
+						<aggregateResults>
+							<all totalTests="13022" totalTrue="0" totalFalse="13022" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+		</homologyPairTests>
+	</homologyTests>
+	<homologyTests fileA="simHuman_simOrangreads_MI0_NGM_20151129.maf" fileB="../Truth/primate/simPrimates.ancestor.maf">
+		<aggregateResults>
+			<all totalTests="998255" totalTrue="975223" totalFalse="23032" average="0.976928"/>
+		</aggregateResults>
+		<homologyPairTests>
+			<homologyTest sequenceA="simOrang.chrF" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="83273" totalTrue="81449" totalFalse="1824" average="0.978096"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrF" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="83273" totalTrue="81449" totalFalse="1824" average="0.978096"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrE" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="203123" totalTrue="198201" totalFalse="4922" average="0.975768"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrE" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="203123" totalTrue="198201" totalFalse="4922" average="0.975768"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrD" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="56953" totalTrue="55642" totalFalse="1311" average="0.976981"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrD" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="56953" totalTrue="55642" totalFalse="1311" average="0.976981"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrC" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="191948" totalTrue="187578" totalFalse="4370" average="0.977233"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrC" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="191948" totalTrue="187578" totalFalse="4370" average="0.977233"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simOrang.chrB" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="462958" totalTrue="452353" totalFalse="10605" average="0.977093"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simOrang.chrB" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="462958" totalTrue="452353" totalFalse="10605" average="0.977093"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="37" totalTrue="0" totalFalse="37" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="37" totalTrue="0" totalFalse="37" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="139" totalTrue="0" totalFalse="139" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="139" totalTrue="0" totalFalse="139" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="56120" totalTrue="55631" totalFalse="489" average="0.991287"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="56120" totalTrue="55631" totalFalse="489" average="0.991287"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="161" totalTrue="4" totalFalse="157" average="0.024845"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="161" totalTrue="4" totalFalse="157" average="0.024845"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="354" totalTrue="10" totalFalse="344" average="0.028249"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="354" totalTrue="10" totalFalse="344" average="0.028249"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrD" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="56811" totalTrue="55645" totalFalse="1166" average="0.979476"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrD" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="56811" totalTrue="55645" totalFalse="1166" average="0.979476"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="261" totalTrue="1" totalFalse="260" average="0.003831"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="261" totalTrue="1" totalFalse="260" average="0.003831"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="538" totalTrue="9" totalFalse="529" average="0.016729"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="538" totalTrue="9" totalFalse="529" average="0.016729"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="152" totalTrue="0" totalFalse="152" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="152" totalTrue="0" totalFalse="152" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="189213" totalTrue="187404" totalFalse="1809" average="0.990439"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="189213" totalTrue="187404" totalFalse="1809" average="0.990439"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="1185" totalTrue="23" totalFalse="1162" average="0.019409"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="1185" totalTrue="23" totalFalse="1162" average="0.019409"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrC" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="191349" totalTrue="187437" totalFalse="3912" average="0.979556"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrC" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="191349" totalTrue="187437" totalFalse="3912" average="0.979556"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="676" totalTrue="3" totalFalse="673" average="0.004438"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="676" totalTrue="3" totalFalse="673" average="0.004438"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="1707" totalTrue="32" totalFalse="1675" average="0.018746"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="1707" totalTrue="32" totalFalse="1675" average="0.018746"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="408" totalTrue="8" totalFalse="400" average="0.019608"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="408" totalTrue="8" totalFalse="400" average="0.019608"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="1549" totalTrue="41" totalFalse="1508" average="0.026469"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="1549" totalTrue="41" totalFalse="1508" average="0.026469"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="459089" totalTrue="452272" totalFalse="6817" average="0.985151"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="459089" totalTrue="452272" totalFalse="6817" average="0.985151"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrB" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="463429" totalTrue="452356" totalFalse="11073" average="0.976106"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrB" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="463429" totalTrue="452356" totalFalse="11073" average="0.976106"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrF">
+				<aggregateResults>
+					<all totalTests="82299" totalTrue="81445" totalFalse="854" average="0.989623"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrF">
+						<aggregateResults>
+							<all totalTests="82299" totalTrue="81445" totalFalse="854" average="0.989623"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrE">
+				<aggregateResults>
+					<all totalTests="200739" totalTrue="198160" totalFalse="2579" average="0.987152"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrE">
+						<aggregateResults>
+							<all totalTests="200739" totalTrue="198160" totalFalse="2579" average="0.987152"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrD">
+				<aggregateResults>
+					<all totalTests="273" totalTrue="3" totalFalse="270" average="0.010989"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrD">
+						<aggregateResults>
+							<all totalTests="273" totalTrue="3" totalFalse="270" average="0.010989"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrC">
+				<aggregateResults>
+					<all totalTests="1025" totalTrue="129" totalFalse="896" average="0.125854"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrC">
+						<aggregateResults>
+							<all totalTests="1025" totalTrue="129" totalFalse="896" average="0.125854"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrB">
+				<aggregateResults>
+					<all totalTests="2330" totalTrue="48" totalFalse="2282" average="0.020601"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="simOrang.chrB">
+						<aggregateResults>
+							<all totalTests="2330" totalTrue="48" totalFalse="2282" average="0.020601"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="simHuman.chrA" sequenceB="aggregate">
+				<aggregateResults>
+					<all totalTests="286666" totalTrue="279785" totalFalse="6881" average="0.975996"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="simHuman.chrA" sequenceB="aggregate">
+						<aggregateResults>
+							<all totalTests="286666" totalTrue="279785" totalFalse="6881" average="0.975996"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+			<homologyTest sequenceA="self" sequenceB="self">
+				<aggregateResults>
+					<all totalTests="0" totalTrue="0" totalFalse="0" average="0.000000"/>
+				</aggregateResults>
+				<singleHomologyTests>
+					<singleHomologyTest sequenceA="self" sequenceB="self">
+						<aggregateResults>
+							<all totalTests="0" totalTrue="0" totalFalse="0" average="0.000000"/>
+						</aggregateResults>
+					</singleHomologyTest>
+				</singleHomologyTests>
+			</homologyTest>
+		</homologyPairTests>
+	</homologyTests>
+	<wigglePairs>
+	</wigglePairs>
+</alignmentComparisons>
