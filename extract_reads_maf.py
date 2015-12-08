@@ -14,6 +14,7 @@ for line in maf:
     if line[0] == "a" or line[0] == "#": continue
     if chromosome in line:
         maf_string = re.split(r' +', line.strip())
+        if maf_string[4] == "-": continue
         chr_name = maf_string[1]
         chr_index = int(maf_string[2])
         fastq_header = '@%s_%s_L%s\n'
@@ -38,7 +39,7 @@ for line in maf:
         fq.write(seq)
         fq.write("\n+\n")
         fq.write("~"*len(seq))
-            fq.write("\n")
+        fq.write("\n")
 
 maf.close()
 fq.close()

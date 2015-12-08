@@ -20,7 +20,7 @@ def split_block(block, chr1, chr2, out):
                         if seq1[i].isalpha() and seq2[i].isalpha(): matches += 1
                         seq1_ungapped.append(seq1[i])
                         seq2_ungapped.append(seq2[i])
-                    if matches < 50: continue
+                    if matches == 0: continue
                     out.write("a score=0\n")
                     out.write("s %s%s %s %s %s %s\n" % (chr1.ljust(20), aln1[2].rjust(12), 
                                 aln1[3].rjust(12), aln1[4], aln1[5].rjust(12), ''.join(seq1_ungapped)))
