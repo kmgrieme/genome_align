@@ -7,7 +7,6 @@ flag_dict = dict()
 with open(sam_file, "r") as f:
     line_num = 0
     for line in f:
-        #print("Processing line %s" % line_num, end="\r")
         if line[0] == "@":
             if line[0:3] == "@PG":
                 parameter_string = line[3:]
@@ -19,7 +18,6 @@ with open(sam_file, "r") as f:
             flag_dict[flag] = 1
         line_num += 1
 
-print("\nDone processing SAM file. Writing flag information.")
 flags = list(flag_dict.keys())
 flags.sort()
 

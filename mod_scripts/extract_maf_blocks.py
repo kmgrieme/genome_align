@@ -1,12 +1,11 @@
 import sys
 import re
 
-def split_block(block, chr1, chr2, out, fq):
+def split_block(block, chr1, chr2, out):
     for strand1 in block:
         if chr1 in strand1:
             aln1 = re.split(r"\s+", strand1.strip())
-            if aln1[4] == "-": continue
-
+            #if aln1[4] == "-": continue
             for strand2 in block:
                 if chr2 in strand2:
                     aln2 = re.split(r"\s+", strand2.strip())
@@ -21,24 +20,7 @@ def split_block(block, chr1, chr2, out, fq):
                         if seq1[i].isalpha() and seq2[i].isalpha(): matches += 1
                         seq1_ungapped.append(seq1[i])
                         seq2_ungapped.append(seq2[i])
-                    
-                    if matches < 25: continue
-                    
-                  ## if threshold met write reads and true maf file
-
-                    fastq_header = "@%s_%s_L%s\n"
-                    fq_seq = re.sub(r"-+", "", aln1[6])
-                    if len(fq_seq) > 1000: 
-                        print("Warning: sequence larger than 1k bp (%s bp)" % len(fq_seq))
-                    elif len(fq_seq) < 50:
-                        print("Warning: sequence smaller than 50 bp (%s bp)" % len(fq_seq))
-                    chr_name = aln1[1]
-                    chr_index = aln1[2]
-                    fq.write(fastq_header % (chr_name, chr_index, len(fq_seq)))
-                    fq.write(fq_seq)
-                    fq.write("\n+\n")
-                    fq.write("~"*len(fq_seq)+"\n")
-
+                    if matches < 1: continue
                     out.write("a score=0\n")
                     out.write("s %s%s %s %s %s %s\n" % (chr1.ljust(20), aln1[2].rjust(12), 
                                 aln1[3].rjust(12), aln1[4], aln1[5].rjust(12), ''.join(seq1_ungapped)))
@@ -90,12 +72,12 @@ for line in in_maf:
     elif line[0] == "a":
         continue
     elif line[0] == "\n":
-        split_block(block, extract1, extract2, out_maf, out_fq)
-        #if fastq: reads_to_file(block, extract1, out_fq)
+        split_block(block, extract1, extract2, out_maf)
+        if fastq: reads_to_file(block, extract1, out_fq)
         block = []
         continue
     block.append(line)
 
 in_maf.close()
 out_maf.close()
-out_fq.close()
+if fastq: out_fq.close()

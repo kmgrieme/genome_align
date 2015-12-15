@@ -18,6 +18,3 @@ with open(sam_file) as f_in:
                 if line_count > 2:
                     new_line = new_line[1:]
             f_out.write(new_line)
-
-f_in.close()
-f_out.close()
